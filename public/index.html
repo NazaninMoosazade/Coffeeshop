@@ -58,39 +58,71 @@
     >
       <div class="flex items-center justify-between w-full">
         <!-- Logo & Menu -->
-        <nav class="flex">
+        <nav class="flex h-14">
           <div class="pl-4">
             <img src="images/app-logo.png" alt="Golden Coffee" />
           </div>
           <ul
-            class="flex items-center font-DanaDemiBold gap-x-9 text-gray-300 tracking-tightest"
+            class="flex items-center h-full top-full font-DanaDemiBold gap-x-9 text-gray-300 tracking-tightest"
           >
-            <li class="text-orange-200">
+            <li class="text-orange-200 leading-[56px]">
               <a href="">صفحه اصلی</a>
             </li>
             <!-- Has Sub -->
-            <li>
-              <a href=""> فروشگاه</a>
+            <li class="relative leading-[56px] group">
+              <a href="" class="group-hover:text-orange-300 transition-colors"> فروشگاه</a>
               <!-- Sub Menu -->
-              <ul class="hidden">
-                <li><a href=""> قهوه ویژه</a></li>
-                <li><a href=""> ویژه در سطح جهانی</a></li>
-                <li><a href=""> قهوه درجه یک</a></li>
-                <li><a href=""> ترکیبات تجاری</a></li>
-                <li><a href=""> کپسول قهوه</a></li>
-                <li><a href=""> قهوه زینو برزیلی</a></li>
-              </ul>
+              <div
+                class="absolute w-52 space-y-4 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white p-6 text-base tracking-normal rounded-2xl border-t-[3px] border-t-orange-300 shadow-normal"
+              >
+                <a
+                  href=""
+                  class="block hover:text-orange-300 transition-colors"
+                >
+                  قهوه ویژه</a
+                >
+                <a
+                  href=""
+                  class="block hover:text-orange-300 transition-colors"
+                >
+                  ویژه در سطح جهانی</a
+                >
+                <a
+                  href=""
+                  class="block hover:text-orange-300 transition-colors"
+                >
+                  قهوه درجه یک</a
+                >
+                <a
+                  href=""
+                  class="block hover:text-orange-300 transition-colors"
+                >
+                  ترکیبات تجاری</a
+                >
+                <a
+                  href=""
+                  class="block hover:text-orange-300 transition-colors"
+                >
+                  کپسول قهوه</a
+                >
+                <a
+                  href=""
+                  class="block hover:text-orange-300 transition-colors"
+                >
+                  قهوه زینو برزیلی</a
+                >
+              </div>
             </li>
-            <li>
+            <li class="leading-[56px]">
               <a href=""> دیکشنری</a>
             </li>
-            <li>
+            <li class="leading-[56px]">
               <a href=""> بلاگ</a>
             </li>
-            <li>
+            <li class="leading-[56px]">
               <a href=""> درباره ما</a>
             </li>
-            <li>
+            <li class="leading-[56px]">
               <a href=""> تماس با ما</a>
             </li>
           </ul>
@@ -101,20 +133,20 @@
           <div class="flex items-center gap-x-5">
             <!-- Cart -->
             <div>
-              <svg class="w-8 h-8">
+              <svg class="w-7 h-7">
                 <use xlink:href="#shopping-cart"></use>
               </svg>
             </div>
             <!-- Theme Switch Btn -->
             <div>
-              <svg class="w-8 h-8"><use xlink:href="#moon"></use></svg>
+              <svg class="w-7 h-7"><use xlink:href="#moon"></use></svg>
             </div>
           </div>
           <!-- Divide Border -->
           <span class="block bg-white/20 w-px h-14"></span>
           <!-- Login Link -->
           <a href="" class="flex items-center gap-x-2.5 font-Dana">
-            <svg class="w-8 h-8 rotate-180">
+            <svg class="w-7 h-7 rotate-180">
               <use xlink:href="#arrow-left"></use>
             </svg>
             <span> ورود | ثبت‌نام </span>
