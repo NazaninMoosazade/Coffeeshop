@@ -6,6 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="icon" href="images/fav-icon.png" />
+    <script type="text/javascript">
+      document.documentElement.classList.toggle(
+        "dark",
+        localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+      );
+    </script>
   </head>
   <body class="bg-gray-100 dark:bg-zinc-800">
     <svg class="hidden">
@@ -70,44 +78,46 @@
             </li>
             <!-- Has Sub -->
             <li class="relative leading-[56px] group">
-              <a href="" class="group-hover:text-orange-300 transition-colors"> فروشگاه</a>
+              <a href="" class="group-hover:text-orange-300 transition-colors">
+                فروشگاه</a
+              >
               <!-- Sub Menu -->
               <div
                 class="absolute w-52 space-y-4 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all bg-white dark:bg-zinc-700 text-zinc-700 dark:text-white p-6 text-base tracking-normal rounded-2xl border-t-[3px] border-t-orange-300 shadow-normal"
               >
                 <a
                   href=""
-                  class="block hover:text-orange-300 transition-colors"
+                  class="inline-block hover:text-orange-300 transition-colors"
                 >
                   قهوه ویژه</a
                 >
                 <a
                   href=""
-                  class="block hover:text-orange-300 transition-colors"
+                  class="inline-block hover:text-orange-300 transition-colors"
                 >
                   ویژه در سطح جهانی</a
                 >
                 <a
                   href=""
-                  class="block hover:text-orange-300 transition-colors"
+                  class="inline-block hover:text-orange-300 transition-colors"
                 >
                   قهوه درجه یک</a
                 >
                 <a
                   href=""
-                  class="block hover:text-orange-300 transition-colors"
+                  class="inline-block hover:text-orange-300 transition-colors"
                 >
                   ترکیبات تجاری</a
                 >
                 <a
                   href=""
-                  class="block hover:text-orange-300 transition-colors"
+                  class="inline-block hover:text-orange-300 transition-colors"
                 >
                   کپسول قهوه</a
                 >
                 <a
                   href=""
-                  class="block hover:text-orange-300 transition-colors"
+                  class="inline-block hover:text-orange-300 transition-colors"
                 >
                   قهوه زینو برزیلی</a
                 >
@@ -133,9 +143,14 @@
           <div class="flex items-center gap-x-5">
             <!-- Cart -->
             <div>
-              <svg class="w-7 h-7">
-                <use xlink:href="#shopping-cart"></use>
-              </svg>
+              <!-- Cart Icon Hover -->
+              <div class="py-3">
+                <svg class="w-7 h-7">
+                  <use xlink:href="#shopping-cart"></use>
+                </svg>
+              </div>
+              <!-- Cart Box -->
+              <div></div>
             </div>
             <!-- Theme Switch Btn -->
             <div>
