@@ -65,10 +65,24 @@
           d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
         />
       </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="menu"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </symbol>
     </svg>
 
     <header
-      class="fixed top-2 right-0 left-0 w-[90%] mt-9 flex items-center h-24 px-10 py-5 rounded-3xl mx-auto bg-black/50 backdrop-blur-[6px]"
+      class="hidden fixed top-2 right-0 left-0 w-[90%] mt-9 lg:flex items-center h-24 px-10 py-5 rounded-3xl mx-auto bg-black/50 backdrop-blur-[6px]"
     >
       <div class="flex items-center justify-between w-full">
         <!-- Logo & Menu -->
@@ -77,7 +91,7 @@
             <img src="images/app-logo.png" alt="Golden Coffee" />
           </div>
           <ul
-            class="flex items-center h-full top-full font-Dana gap-x-9 text-gray-300 -tracking-tightest"
+            class="hidden lg:flex items-center h-full top-full font-Dana gap-x-9 text-gray-300 -tracking-tightest"
           >
             <li class="text-orange-200 leading-[56px]">
               <a href="">صفحه اصلی</a>
@@ -89,7 +103,7 @@
               >
               <!-- Sub Menu -->
               <div
-                class="absolute w-52 space-y-4 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all bg-white text-zinc-700 p-6 text-base tracking-normal rounded-2xl border-t-[3px] border-t-orange-300 shadow-normal"
+                class="absolute w-52 space-y-4 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all dark:bg-zinc-700 dark:text-white bg-white text-zinc-700 p-6 text-base tracking-normal rounded-2xl border-t-[3px] border-t-orange-300 shadow-normal"
               >
                 <a
                   href=""
@@ -144,7 +158,7 @@
           </ul>
         </nav>
         <!-- Cart & Theme Toggle & Login Link -->
-        <div class="flex gap-x-10">
+        <div class="flex gap-x-5 xl:gap-x-10">
           <!-- Cart Icon & Theme Switch Btn -->
           <div class="flex items-center gap-x-5">
             <!-- Cart -->
@@ -155,9 +169,10 @@
                   <use xlink:href="#shopping-cart"></use>
                 </svg>
               </div>
+
               <!-- Cart Box -->
               <div
-                class="absolute top-full left-0 w-[400px] rounded-2xl p-5 invisible opacity-0 group-hover:opacity-100 group-hover:visible bg-white border-t-[3px] border-t-orange-300 shadow-normal"
+                class="absolute top-full left-0 w-[400px] rounded-2xl p-5 invisible opacity-0 group-hover:opacity-100 group-hover:visible dark:bg-zinc-700 bg-white border-t-[3px] border-t-orange-300 shadow-normal"
               >
                 <!-- Cart Header -->
                 <div
@@ -174,13 +189,13 @@
                   </div>
                   <!-- description -->
                   <div class="mt-5">
-                    <p class="font-Dana text-black leading-6">
+                    <p class="font-Dana text-black dark:text-white leading-6">
                       قهوه اسپرسو بن مانو مدل پریسکا
                       <span class="block">250 گرمی</span>
                     </p>
                     <div class="mt-6">
                       <span
-                        class="block font-DanaDemiBold -tracking-tightest text-xs text-emerald-700"
+                        class="block font-DanaDemiBold -tracking-tightest text-xs dark:text-emerald-500 text-emerald-700"
                         >14.500 تومان تخفیف</span
                       >
                       <div class="flex items-center gap-x-1 mt-1.5">
@@ -211,6 +226,22 @@
                 </div>
               </div>
             </div>
+
+            <!-- Icons -->
+            <div id="toggle-theme">
+              <svg
+                class="inline-block dark:hidden w-7 h-7 text-orange-200"
+                id="#toggle-theme"
+              >
+                <use xlink:href="#sun"></use>
+              </svg>
+              <svg
+                class="hidden dark:inline-block w-7 h-7 text-orange-200"
+                id="#toggle-theme"
+              >
+                <use xlink:href="#moon"></use>
+              </svg>
+            </div>
           </div>
           <!-- Divide Border -->
           <span class="block bg-white/20 w-px h-14"></span>
@@ -222,16 +253,32 @@
             <svg class="w-7 h-7 rotate-180">
               <use xlink:href="#arrow-left"></use>
             </svg>
-            <span> ورود | ثبت‌نام </span>
+            <span class="hidden xl:inline-block"> ورود | ثبت‌نام </span>
           </a>
         </div>
       </div>
     </header>
+
+    <!-- Responsive Header -->
+    <div class="lg:hidden bg-white dark:bg-zinc-700 h-20 w-full">
+      <div class="flex justify-between items-center p-5">
+        <svg class="w-7 h-7 text-zinc-700 dark:text-white">
+          <use xlink:href="#menu"></use>
+        </svg>
+
+        <img src="images/svgs/app-logo-type.svg" alt="app-logo-type.svg" />
+
+        <svg class="w-7 h-7 text-zinc-700 dark:text-white">
+          <use xlink:href="#shopping-cart"></use>
+        </svg>
+      </div>
+    </div>
 
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
