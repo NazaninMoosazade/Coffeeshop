@@ -79,6 +79,20 @@
           d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
         />
       </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="x-mark"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </symbol>
     </svg>
 
     <header
@@ -228,7 +242,7 @@
             </div>
 
             <!-- Icons -->
-            <div id="toggle-theme">
+            <div class="toggle-theme">
               <svg
                 class="inline-block dark:hidden w-7 h-7 text-orange-200"
                 id="#toggle-theme"
@@ -262,12 +276,68 @@
     <!-- Responsive Header -->
     <div class="lg:hidden bg-white dark:bg-zinc-700 h-20 w-full">
       <div class="flex justify-between items-center p-5">
-        <svg class="w-7 h-7 text-zinc-700 dark:text-white">
-          <use xlink:href="#menu"></use>
-        </svg>
+        <!-- Mobile Menu -->
+        <div class="">
+          <svg class="w-7 h-7 text-zinc-700 dark:text-white">
+            <use xlink:href="#menu"></use>
+          </svg>
+          <!-- Menu -->
+          <div
+            class="fixed min-h-screen top-0 bottom-0 right-0 w-[256px] z-20 p-4 bg-white dark:bg-zinc-700"
+          >
+            <div
+              class="pb-5 border-b border-b-gray-100 dark:border-b dark:border-b-white/10"
+            >
+              <div class="flex items-center justify-between">
+                <img
+                  src="images/svgs/app-logo-type.svg"
+                  alt="app-logo-type.svg"
+                />
+                <svg class="w-6 h-6 text-zinc-700 dark:text-white">
+                  <use xlink:href="#x-mark"></use>
+                </svg>
+              </div>
+            </div>
 
+            <div
+              class="pt-5 space-y-6 border-t border-t-gray-100 dark:border-b dark:border-b-white/10"
+            >
+              <div class="inline-flex items-center gap-x-2 text-orange-300">
+                <svg class="w-5 h-5 text-orange-300">
+                  <use xlink:href="#arrow-left"></use>
+                </svg>
+                <a href="#" class="font-Dana"> ورود | ثبت‌نام </a>
+              </div>
+
+              <div class="toggle-theme cursor-pointer">
+                <div class="flex items-center gap-x-2 dark:hidden">
+                  <svg class="w-6 h-6 text-orange-300">
+                    <use xlink:href="#sun"></use>
+                  </svg>
+                  <span class="text-orange-300">تم روشن</span>
+                </div>
+                <div class="hidden dark:flex items-center gap-x-2">
+                  <svg class="w-6 h-6 text-orange-300">
+                    <use xlink:href="#moon"></use>
+                  </svg>
+                  <span class="text-orange-300">تم دارک</span>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-x-2 text-orange-300">
+                <svg class="w-5 h-5 text-orange-300">
+                  <use xlink:href="#shopping-cart"></use>
+                </svg>
+                <a href="#"> سبد خرید </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Logo Coffe -->
         <img src="images/svgs/app-logo-type.svg" alt="app-logo-type.svg" />
 
+        <!-- Shopping Cart -->
         <svg class="w-7 h-7 text-zinc-700 dark:text-white">
           <use xlink:href="#shopping-cart"></use>
         </svg>
@@ -279,6 +349,9 @@
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <div
+      class="overlay md:hidden fixed inset-0 w-full h-full z-10 bg-black/40"
+    ></div>
     <script src="./scripts/app.js"></script>
   </body>
 </html>

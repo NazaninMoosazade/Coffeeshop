@@ -1,10 +1,22 @@
-const toggleThemeBtn = document.querySelector("#toggle-theme");
-toggleThemeBtn.addEventListener("click" , () => {
-    if (localStorage.theme === "dark"){
+// موقع لود صفحه: اگر تم ذخیره شده بود، اعمال کن
+if (localStorage.theme === "dark") {
+    document.documentElement.classList.add("dark");
+  } else if (localStorage.theme === "light") {
+    document.documentElement.classList.remove("dark");
+  }
+  
+  // همه دکمه های تغییر تم رو انتخاب کن
+  const toggleThemeBtns = document.querySelectorAll(".toggle-theme");
+  
+  toggleThemeBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      if (document.documentElement.classList.contains("dark")) {
         document.documentElement.classList.remove("dark");
-        localStorage.theme = "light";
-    } else {
+        localStorage.setItem("theme", "light");
+      } else {
         document.documentElement.classList.add("dark");
-        localStorage.setItem("theme" , "dark");
-    }
-})
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  });
+  
