@@ -20,3 +20,42 @@ if (localStorage.theme === "dark") {
     });
   });
   
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('overlay');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+  });
+
+  menuClose.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    overlay.classList.add('hidden');
+  });
+
+  overlay.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    overlay.classList.add('hidden');
+  });  
+
+  const cartToggle = document.getElementById('cart-toggle');
+  const cartClose = document.getElementById('cart-close');
+  const cartMenu = document.getElementById('cart-menu');
+
+  cartToggle.addEventListener('click', () => {
+    cartMenu.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+  });
+
+  cartClose.addEventListener('click', () => {
+    cartMenu.classList.add('hidden');
+    overlay.classList.add('hidden');
+  });
+
+  overlay.addEventListener('click', () => {
+    cartMenu.classList.add('hidden');
+    overlay.classList.add('hidden');
+  });
