@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
-    <link href="./css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" href="images/fav-icon.png" />
   </head>
   <body class="bg-gray-100 dark:bg-zinc-800">
@@ -1438,9 +1438,7 @@
           <!-- Slider main container -->
           <div class="swiper">
             <!-- Additional required wrapper -->
-            <div
-              class="swiper-wrapper gap-x-5 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-            >
+            <div class="swiper-wrapper">
               <!-- Slides -->
 
               <div class="swiper-slide">
@@ -1895,6 +1893,38 @@
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
     <script src="./scripts/app.js"></script>
-    <script src="./scripts/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next-custom",
+          prevEl: ".swiper-button-prev-custom",
+        },
+        breakpoints: {
+          480: {
+            slidesPerView: 1.5,
+            spaceBetween: 14,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+          },
+          768: {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+          1280: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
