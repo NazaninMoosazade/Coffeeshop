@@ -244,6 +244,9 @@
   .z-30 {
     z-index: 30;
   }
+  .z-50 {
+    z-index: 50;
+  }
   .container {
     width: 100%;
     @media (width >= 480px) {
@@ -341,6 +344,9 @@
   .h-24 {
     height: calc(var(--spacing) * 24);
   }
+  .h-\[22px\] {
+    height: 22px;
+  }
   .h-\[120px\] {
     height: 120px;
   }
@@ -367,6 +373,9 @@
   }
   .w-\[90\%\] {
     width: 90%;
+  }
+  .w-\[100px\] {
+    width: 100px;
   }
   .w-\[120px\] {
     width: 120px;
@@ -600,6 +609,9 @@
   .text-emerald-700 {
     color: var(--color-emerald-700);
   }
+  .text-gray-100 {
+    color: var(--color-gray-100);
+  }
   .text-gray-300 {
     color: var(--color-gray-300);
   }
@@ -799,7 +811,7 @@
 }
 @font-face {
   font-family: "Dana Medium";
-  src: url("./../public//fonts/Dana/woff2/DanaFaNum-Medium.woff2") format('woff2');
+  src: url("./../public//fonts/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "Dana DemiBold";
@@ -820,6 +832,7 @@
 body {
   background-image: url(../public/images/headerBgDesktop.png);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 @property --tw-space-y-reverse {
   syntax: "*";

@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: "Dana Medium"; /* 500 */
-  src:url("./../public//fonts/Dana/woff2/DanaFaNum-Medium.woff2") format('woff2');
+  src: url("./../public//fonts/Dana/woff2/DanaFaNum-Medium.woff2")
+    format("woff2");
   /* src: url("./../public/font/Dana/woff2/DanaFaNum-Medium.woff2") format("woff2"); */
 }
 
@@ -25,7 +26,8 @@
 
 @font-face {
   font-family: "Morabba Medium";
-  src: url("./../public/font/Morabba/woff2/Morabba-Medium.woff2") format("woff2");
+  src: url("./../public/font/Morabba/woff2/Morabba-Medium.woff2")
+    format("woff2");
 }
 
 @font-face {
@@ -58,10 +60,10 @@
   --breakpoint-xs: 480px;
 }
 
-
 body {
   background-image: url(../public/images/headerBgDesktop.png);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @utility container {
